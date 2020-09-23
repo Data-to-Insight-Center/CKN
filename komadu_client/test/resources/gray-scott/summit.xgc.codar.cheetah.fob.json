@@ -1,0 +1,122 @@
+{
+    "id": "run-0.iteration-0",
+    "kill_on_partial_failure": true,
+    "launch_mode": "default",
+    "machine_name": "summit",
+    "node_layout": [
+        {
+            "__info_type__": "NodeConfig",
+            "cpu": [
+                "simulation:0",
+                "simulation:0",
+                "simulation:0",
+                "simulation:0",
+                "simulation:0",
+                "simulation:0",
+                "simulation:1",
+                "simulation:1",
+                "simulation:1",
+                "simulation:1",
+                "simulation:1",
+                "simulation:1",
+                "simulation:2",
+                "simulation:2",
+                "simulation:2",
+                "simulation:2",
+                "simulation:2",
+                "simulation:2",
+                "f_analysis:0",
+                "f_analysis:0",
+                "f_analysis:0",
+                "simulation:3",
+                "simulation:3",
+                "simulation:3",
+                "simulation:3",
+                "simulation:3",
+                "simulation:3",
+                "simulation:4",
+                "simulation:4",
+                "simulation:4",
+                "simulation:4",
+                "simulation:4",
+                "simulation:4",
+                "simulation:5",
+                "simulation:5",
+                "simulation:5",
+                "simulation:5",
+                "simulation:5",
+                "simulation:5",
+                "f_analysis:0",
+                "f_analysis:0",
+                "f_analysis:0"
+            ],
+            "gpu": [
+                [
+                    "simulation:0"
+                ],
+                [
+                    "simulation:1"
+                ],
+                [
+                    "simulation:2"
+                ],
+                [
+                    "simulation:3"
+                ],
+                [
+                    "simulation:4"
+                ],
+                [
+                    "simulation:5"
+                ]
+            ]
+        }
+    ],
+    "post_process_args": [
+        "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/codar.cheetah.run-params.json"
+    ],
+    "post_process_script": null,
+    "post_process_stop_on_failure": false,
+    "runs": [
+        {
+            "adios_xml_file": null,
+            "after_rc_done": null,
+            "args": [],
+            "env": {
+                "PROFILEDIR": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/codar.cheetah.tau-simulation",
+                "TRACEDIR": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/codar.cheetah.tau-simulation"
+            },
+            "exe": "/gpfs/alpine/scratch/swithana/csc143/xgc-f/XGC-Devel-xgc1-f0-coupling/xgc_build/xgc-es",
+            "hostfile": null,
+            "linked_with_sosflow": false,
+            "name": "simulation",
+            "nprocs": 48,
+            "runner_override": false,
+            "sched_args": null,
+            "sleep_after": 0,
+            "timeout": 60,
+            "working_dir": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/simulation"
+        },
+        {
+            "adios_xml_file": null,
+            "after_rc_done": null,
+            "args": [],
+            "env": {
+                "PROFILEDIR": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/codar.cheetah.tau-f_analysis",
+                "TRACEDIR": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/codar.cheetah.tau-f_analysis"
+            },
+            "exe": "/gpfs/alpine/scratch/swithana/csc143/xgc-f/XGC-Devel-xgc1-f0-coupling/xgc_build/xgc-f0",
+            "hostfile": null,
+            "linked_with_sosflow": false,
+            "name": "f_analysis",
+            "nprocs": 8,
+            "runner_override": false,
+            "sched_args": null,
+            "sleep_after": 0,
+            "timeout": 60,
+            "working_dir": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0/f_analysis"
+        }
+    ],
+    "total_nodes": 2,
+    "working_dir": "/gpfs/alpine/csc143/scratch/swithana/campaigns/swithana/summit-xgc-f1-1/run-0.iteration-0"
+}

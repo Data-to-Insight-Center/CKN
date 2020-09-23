@@ -1,0 +1,5 @@
+<quer:getEntityBackwardGraphRequest xmlns:quer="http://komadu.d2i.indiana.edu/query" xmlns:komadu="http://komadu.d2i.indiana.edu">
+  <quer:entityType>FILE</quer:entityType>
+  <quer:entityURI>swithana-kTest-ftest-run-0.iteration-0-simulation-stderr</quer:entityURI>
+  <quer:informationDetailLevel>FINE</quer:informationDetailLevel>
+</quer:getEntityBackwardGraphRequest>

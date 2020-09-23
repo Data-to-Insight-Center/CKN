@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:kom="http://komadu.d2i.indiana.edu" xmlns:ext="http://komadu.d2i.indiana.edu/external" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:quer="http://komadu.d2i.indiana.edu/query">
+      <prov:activity prov:id="kom:Activity_389"/>
+      <prov:activity prov:id="kom:Activity_390"/>
+      <prov:entity prov:id="kom:File_456">
+        <kom:type xsi:type="xsd:string">File</kom:type>
+        <kom:url xsi:type="xsd:string">swithana-kTest-ftest-run-0.iteration-0-settings.json</kom:url>
+        <kom:size xsi:type="xsd:string">0</kom:size>
+        <kom:creation-date xsi:type="xsd:string">2020-09-12 14:30:15.0</kom:creation-date>
+        <kom:file-name xsi:type="xsd:string">settings.json</kom:file-name>
+        <kom:md5_checksum xsi:type="xsd:string">dummymd5</kom:md5_checksum>
+        <ext:L xsi:type="xsd:string">8</ext:L>
+        <ext:Du xsi:type="xsd:string">0.2</ext:Du>
+        <ext:Dv xsi:type="xsd:string">0.1</ext:Dv>
+        <ext:F xsi:type="xsd:string">0.04</ext:F>
+        <ext:k xsi:type="xsd:string">0.058</ext:k>
+        <ext:dt xsi:type="xsd:string">1.0</ext:dt>
+        <ext:plotgap xsi:type="xsd:string">25</ext:plotgap>
+        <ext:steps xsi:type="xsd:string">200</ext:steps>
+        <ext:noise xsi:type="xsd:string">0.01</ext:noise>
+        <ext:output xsi:type="xsd:string">gs.bp</ext:output>
+        <ext:adios_span xsi:type="xsd:string">False</ext:adios_span>
+        <ext:adios_config xsi:type="xsd:string">adios2.xml</ext:adios_config>
+        <ext:mesh_type xsi:type="xsd:string">image</ext:mesh_type>
+        <ext:location xsi:type="xsd:string">/Users/swithana/codar/campaigns/kTest/swithana/ftest/run-0.iteration-0/settings.json</ext:location>
+      </prov:entity>
+      <prov:entity prov:id="kom:File_458">
+        <kom:type xsi:type="xsd:string">File</kom:type>
+        <kom:url xsi:type="xsd:string">swithana-kTest-ftest-run-0.iteration-0-simulation-stderr</kom:url>
+        <kom:size xsi:type="xsd:string">0</kom:size>
+        <kom:creation-date xsi:type="xsd:string">2020-09-12 14:30:15.0</kom:creation-date>
+        <kom:file-name xsi:type="xsd:string">std-err</kom:file-name>
+        <kom:md5_checksum xsi:type="xsd:string">dummymd5</kom:md5_checksum>
+        <ext:location xsi:type="xsd:string">/Users/swithana/codar/campaigns/kTest/swithana/ftest/run-0.iteration-0/codar.workflow.stderr.simulation</ext:location>
+      </prov:entity>
+      <prov:entity prov:id="kom:File_460">
+        <kom:type xsi:type="xsd:string">File</kom:type>
+        <kom:url xsi:type="xsd:string">swithana-kTest-ftest-run-0.iteration-0-simulation-stdout</kom:url>
+        <kom:size xsi:type="xsd:string">0</kom:size>
+        <kom:creation-date xsi:type="xsd:string">2020-09-12 14:30:15.0</kom:creation-date>
+        <kom:file-name xsi:type="xsd:string">std-out</kom:file-name>
+        <kom:md5_checksum xsi:type="xsd:string">dummymd5</kom:md5_checksum>
+        <ext:location xsi:type="xsd:string">/Users/swithana/codar/campaigns/kTest/swithana/ftest/run-0.iteration-0/codar.workflow.stdout.simulation</ext:location>
+      </prov:entity>
+      <prov:wasDerivedFrom prov:id="kom:Derivation_456_460">
+        <prov:generatedEntity prov:ref="kom:File_460"/>
+        <prov:usedEntity prov:ref="kom:File_456"/>
+      </prov:wasDerivedFrom>
+      <prov:wasGeneratedBy prov:id="kom:Generation_554">
+        <prov:entity prov:ref="kom:File_460"/>
+        <prov:activity prov:ref="kom:Activity_389"/>
+      </prov:wasGeneratedBy>
+      <prov:wasDerivedFrom prov:id="kom:Derivation_456_458">
+        <prov:generatedEntity prov:ref="kom:File_458"/>
+        <prov:usedEntity prov:ref="kom:File_456"/>
+      </prov:wasDerivedFrom>
+      <prov:wasInformedBy prov:id="kom:Communication_232">
+        <prov:informed prov:ref="kom:Activity_390"/>
+        <prov:informant prov:ref="kom:Activity_389"/>
+      </prov:wasInformedBy>
+      <prov:wasGeneratedBy prov:id="kom:Generation_552">
+        <prov:entity prov:ref="kom:File_458"/>
+        <prov:activity prov:ref="kom:Activity_389"/>
+      </prov:wasGeneratedBy>
+      <prov:used prov:id="kom:Usage_264">
+        <prov:activity prov:ref="kom:Activity_389"/>
+        <prov:entity prov:ref="kom:File_456"/>
+      </prov:used>
+    </prov:document>
+  

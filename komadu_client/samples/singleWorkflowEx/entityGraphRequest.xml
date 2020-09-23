@@ -1,0 +1,5 @@
+<quer:getEntityGraphRequest xmlns:quer="http://komadu.d2i.indiana.edu/query" xmlns:komadu="http://komadu.d2i.indiana.edu">
+  <quer:entityType>FILE</quer:entityType>
+  <quer:entityURI>swithana-kTest-ftest-run-1.iteration-0-simulation-stdout</quer:entityURI>
+  <quer:informationDetailLevel>FINE</quer:informationDetailLevel>
+</quer:getEntityGraphRequest>

@@ -1,0 +1,170 @@
+{
+    "id": "run-0.iteration-0",
+    "kill_on_partial_failure": true,
+    "launch_mode": "default",
+    "machine_name": "summit",
+    "node_layout": [
+        {
+            "__info_type__": "NodeConfig",
+            "cpu": [
+                "simulation:0",
+                "simulation:1",
+                "simulation:2",
+                "simulation:3",
+                "simulation:4",
+                "simulation:5",
+                "simulation:6",
+                "simulation:7",
+                "simulation:8",
+                "simulation:9",
+                "simulation:10",
+                "simulation:11",
+                "simulation:12",
+                "simulation:13",
+                "simulation:14",
+                "simulation:15",
+                "simulation:16",
+                "simulation:17",
+                "simulation:18",
+                "simulation:19",
+                "simulation:20",
+                "simulation:21",
+                "simulation:22",
+                "simulation:23",
+                "simulation:24",
+                "simulation:25",
+                "simulation:26",
+                "simulation:27",
+                "simulation:28",
+                "simulation:29",
+                "simulation:30",
+                "simulation:31",
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "gpu": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            "__info_type__": "NodeConfig",
+            "cpu": [
+                "pdf_calc:0",
+                "pdf_calc:1",
+                "pdf_calc:2",
+                "pdf_calc:3",
+                "pdf_calc:4",
+                "pdf_calc:5",
+                "pdf_calc:6",
+                "pdf_calc:7",
+                "pdf_calc:8",
+                "pdf_calc:9",
+                "pdf_calc:10",
+                "pdf_calc:11",
+                "pdf_calc:12",
+                "pdf_calc:13",
+                "pdf_calc:14",
+                "pdf_calc:15",
+                "pdf_calc:16",
+                "pdf_calc:17",
+                "pdf_calc:18",
+                "pdf_calc:19",
+                "pdf_calc:20",
+                "pdf_calc:21",
+                "pdf_calc:22",
+                "pdf_calc:23",
+                "pdf_calc:24",
+                "pdf_calc:25",
+                "pdf_calc:26",
+                "pdf_calc:27",
+                "pdf_calc:28",
+                "pdf_calc:29",
+                "pdf_calc:30",
+                "pdf_calc:31",
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "gpu": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ]
+        }
+    ],
+    "post_process_args": [
+        "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0/codar.cheetah.run-params.json"
+    ],
+    "post_process_script": null,
+    "post_process_stop_on_failure": false,
+    "runs": [
+        {
+            "adios_xml_file": "/Users/swithana/git/adios/adiosvm/Tutorial/gray-scott/build/adios2.xml",
+            "after_rc_done": null,
+            "args": [
+                "settings.json"
+            ],
+            "env": {
+                "PROFILEDIR": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0/codar.cheetah.tau-simulation",
+                "TRACEDIR": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0/codar.cheetah.tau-simulation"
+            },
+            "exe": "/Users/swithana/git/adios/adiosvm/Tutorial/gray-scott/build/gray-scott",
+            "hostfile": null,
+            "linked_with_sosflow": false,
+            "name": "simulation",
+            "nprocs": 336,
+            "runner_override": false,
+            "sched_args": null,
+            "sleep_after": 0,
+            "timeout": 600,
+            "working_dir": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0"
+        },
+        {
+            "adios_xml_file": "/Users/swithana/git/adios/adiosvm/Tutorial/gray-scott/build/adios2.xml",
+            "after_rc_done": null,
+            "args": [
+                "gs.bp",
+                "pdf"
+            ],
+            "env": {
+                "PROFILEDIR": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0/codar.cheetah.tau-pdf_calc",
+                "TRACEDIR": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0/codar.cheetah.tau-pdf_calc"
+            },
+            "exe": "/Users/swithana/git/adios/adiosvm/Tutorial/gray-scott/build/pdf_calc",
+            "hostfile": null,
+            "linked_with_sosflow": false,
+            "name": "pdf_calc",
+            "nprocs": 10,
+            "runner_override": false,
+            "sched_args": null,
+            "sleep_after": 0,
+            "timeout": 600,
+            "working_dir": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0"
+        }
+    ],
+    "total_nodes": 12,
+    "working_dir": "/Users/swithana/codar/campaigns/gray-scott/swithana/summit-1/run-0.iteration-0"
+}

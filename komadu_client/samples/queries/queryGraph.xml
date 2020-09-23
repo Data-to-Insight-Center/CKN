@@ -1,0 +1,4 @@
+<quer:getActivityGraphRequest xmlns:quer="http://komadu.d2i.indiana.edu/query">
+    <quer:informationDetailLevel>FINE</quer:informationDetailLevel>
+    <quer:activityURI>demo-test35-run-0.iteration-0-simulation</quer:activityURI>
+</quer:getActivityGraphRequest>
