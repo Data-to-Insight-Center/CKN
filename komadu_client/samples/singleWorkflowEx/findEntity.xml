@@ -1,4 +1,4 @@
 <quer:findEntityRequest xmlns:quer="http://komadu.d2i.indiana.edu/query">
   <quer:fileName>settings.json</quer:fileName>
-  <quer:fileOwnerID>1</quer:fileOwnerID>
+  <quer:fileMD5Checksum>dummymd5</quer:fileMD5Checksum>
 </quer:findEntityRequest>
