@@ -6,6 +6,9 @@ CLIENT_ID = "test1"
 SAXON_COMMAND = "java -jar samples/visualization/saxon9he.jar -s:output.xml " \
                 "-xsl:samples/visualization/xslt/pipeline_xml2csv.xsl"
 
+# todo: come up with the real MD5?
+DUMMY_MD5 = 'dummyMD5'
+
 # RabbitMQ settings
 RABBITMQ_USERNAME = "guest"
 RABBITMQ_PWD = "guest"

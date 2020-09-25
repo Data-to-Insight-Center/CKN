@@ -3,6 +3,7 @@ from komadu_client.models.ingest_models import entityType, fileType, activityTyp
     usageType, activityEntityType, generationType, addAttributesType
 from komadu_client.util.association_enums import AssociationEnum
 from komadu_client.util.util import get_node_id, get_attributes
+from komadu_client.util.constants import DUMMY_MD5
 from datetime import datetime
 
 
@@ -12,8 +13,12 @@ def create_file_entity(filename, file_uri, attributes=None, location=None, creat
     file = fileType()
     file.fileName = filename
     file.fileURI = str(file_uri)
+    file.md5sum = DUMMY_MD5
+
     if created_date is not None:
         file.createDate = created_date
+    else:
+        file.createDate = datetime.now()
     if owner is not None:
         file.ownerDN = owner
     if size is not None:

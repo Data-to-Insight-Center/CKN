@@ -27,7 +27,7 @@ def get_experiment_info(file_path):
         # experiment_name = username + "-" +codesign_name + "-" + campaign_name + "-" + dirs[-2] + "-" + run_name
         experiment_name = username + "-" + campaign_name + "-" + dirs[-2] + "-" + run_name
     else:
-        experiment_name = run_name`
+        experiment_name = run_name
 
     return experiment_name, codesign_name, campaign_name, username, sweepGroup, sweep
 

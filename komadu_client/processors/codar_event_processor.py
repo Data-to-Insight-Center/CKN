@@ -55,8 +55,7 @@ class AbstractEventProcessor:
                 run_id = sweepGroup + "-" + run
                 self.graphdb.add_property_to_node(SWEEP_UPDATE_QUERY.format(run_id, data[run]['state'], data[run]['reason']))
 
-
-    def process_workflow_completion(self, file_path, location, workflow_id, workflow_name, workflow_version):
+    def process_workflow_completion(self, file_path, location, workflow_id, workflow_name, workflow_version, username):
         """
         Gets triggered when the walltime files are created in Codar.
         :param file_path:
@@ -73,7 +72,7 @@ class AbstractEventProcessor:
         activity = create_workflow_activity(workflow_id, workflow_node_id, workflow_node_id,
                                             workflow_name, workflow_version,
                                             datetime.now(), location)
-        self.process_std_out(file_path, activity, workflow_node_id)
+        self.process_std_out(file_path, activity, workflow_node_id, username)
         logger.info("Processing std out/error")
 
     def get_wall_time_from_file(self, filename):
@@ -99,7 +98,7 @@ class AbstractEventProcessor:
             # process the final statuses file (codar.workflow.status.json)
             self.update_statuses(file_path, workflow_id)
 
-    def process_std_out(self, file_path, activity, activity_id):
+    def process_std_out(self, file_path, activity, activity_id, username):
         """
         Processes the standard output and error and sends to Komadu
         :param file_path:
@@ -118,8 +117,8 @@ class AbstractEventProcessor:
         std_out_attributes = get_attributes({"location": str(std_out)})
         std_err_attributes = get_attributes({"location": str(std_err)})
 
-        stdout_entity = create_file_entity("std-out", activity_id + "-stdout", location=str(std_out), attributes=std_out_attributes)
-        stderr_entity = create_file_entity("std-err", activity_id + "-stderr", location=str(std_err), attributes=std_err_attributes)
+        stdout_entity = create_file_entity("std-out", activity_id + "-stdout", location=str(std_out), attributes=std_out_attributes, owner=username)
+        stderr_entity = create_file_entity("std-err", activity_id + "-stderr", location=str(std_err), attributes=std_err_attributes, owner=username)
         activity_entity_stdout = get_activity_entity(activity, stdout_entity, datetime.now(), activity_id,
                                                      stdout_entity.file.fileURI, AssociationEnum.GENERATION)
         activity_entity_stderr = get_activity_entity(activity, stderr_entity, datetime.now(), activity_id,
@@ -212,7 +211,7 @@ class GrayScottEventProcessor(AbstractEventProcessor):
             self._process_output_file(filename, file_path, self.location, workflow_id, self.username)
         elif CHEETAH_WALLTIME in file_path.lower():
             self.process_workflow_completion(file_path, self.location, workflow_id, GRAYSCOTT_WORKFLOW_NAME,
-                                              GRAYSCOTT_WORKFLOW_VERSION)
+                                              GRAYSCOTT_WORKFLOW_VERSION, self.username)
         # elif TAU_FILE_NAME == filename:
         #     logger.info("Processing Tau File: {} !".format(filename))
         #     self.publish_tau_info(file_path, workflow_id)
@@ -290,7 +289,7 @@ class BrusselatorEventProcessor(AbstractEventProcessor):
             self._process_brusselator_adios2_xml(filename, file_path, self.location, workflow_id, self.username)
         elif CHEETAH_WALLTIME in file_path.lower():
             self.process_workflow_completion(file_path, self.location, workflow_id, self.workflow_name,
-                                             self.workflow_version)
+                                             self.workflow_version, self.username)
         elif TAU_FILE_NAME == filename:
             logger.info("Processing Tau File: {} !".format(filename))
             self.publish_tau_info(file_path, workflow_id)
