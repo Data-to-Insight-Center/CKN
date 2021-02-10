@@ -35,6 +35,15 @@ class Database(object):
         with self._driver.session() as session:
             session.write_transaction(self.add_input_graph, query)
 
+    def run_cypher_query(self, query):
+        """
+        Runs a given query
+        :param query:
+        :return:
+        """
+        with self._driver.session() as session:
+            session.write_transaction(self.add_input_graph, query)
+
     def add_property_to_node(self, query):
         """
         Adds an input to the graph
@@ -66,7 +75,7 @@ class Database(object):
 
     @staticmethod
     def add_input_graph(tx, query):
-        return tx.run(query).single()\
+        return tx.run(query).single()
 
     @staticmethod
     def add_property_to_graph(tx, query):
