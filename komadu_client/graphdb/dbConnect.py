@@ -5,7 +5,7 @@ from komadu_client.graphdb.queries import CREATE_USER, READ_USER
 class Database(object):
 
     def __init__(self, uri, user, password):
-        self._driver = GraphDatabase.driver(uri, auth=(user, password))
+        self._driver = GraphDatabase.driver(uri, auth=(user, password), encrypted=False)
 
     def close(self):
         self._driver.close()
