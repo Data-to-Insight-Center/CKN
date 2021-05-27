@@ -17,6 +17,15 @@ INSTANCE_QUERY = "MATCH (sw:Sweep{{id:'{0}'}})" \
         "CREATE (:Results{{id:'{5}'}})-[:generatedBy]->(:WorkflowNode{{id:'{6}'}})<-[:runs]-(n4)"
 
 
+INSTANCE_UPDATE_QUERY = "MATCH (inst:Instance{{id:'{0}' }}) SET inst.machine='{1}', inst.node_layout='{2}'"\
+                        ", inst.modules='{3}'"
+
+INPUT_UPDATE_QUERY = "MATCH (input:Input{{id:'{0}' }}) SET "\
+                     "input.L={1}, input.Du={2},"\
+                     "input.Dv={3}, input.F={4},"\
+                     "input.k={5}, input.dt={6},"\
+                     "input.plotgap={7}, input.steps={8},"\
+                     "input.noise={9}"
 
 CONSTRAINTS = "CREATE CONSTRAINT ON (user:User) ASSERT user.id IS UNIQUE; "\
         "CREATE CONSTRAINT ON (cod:Codesign) ASSERT cod.id IS UNIQUE;" \
